@@ -11,7 +11,7 @@
 			<!-- For Browser -->
 			<meta property="og:site_name" content="Xplore">
 			<meta property="og:title" content="Xplore | The Beautiful Nation of the Philippines">
-			<meta property="og:url" content="https://aquino-genesis.github.io/LP_ICT9Ruby_Q3Project_Group5">
+			<meta property="og:url" content="https://aquino-genesis.github.io/LP_ICT9Ruby_Q3Project_Group10/">
 			<meta property="og:type" content="website">
 			<meta property="og:description" content="Xplore is a fare calculator that lets you find your next destinations to visit. Learn more about us!">
 			<meta property="og:image" content="Images/xplore-logo">
@@ -20,8 +20,8 @@
 
 			<!-- For Twitter -->
 			<meta name="twitter:title" content="Xplore | The Beautiful Nation of the Philippines">
-			<meta name="twitter:url" content="https://aquino-genesis.github.io/LP_ICT9Ruby_Q3Project_Group5">
-			<meta name="twitter:image" content="https://aquino-genesis.github.io/LP_ICT9Ruby_Q3Project_Group5/Images/xplore-logo.png">
+			<meta name="twitter:url" content="https://aquino-genesis.github.io/LP_ICT9Ruby_Q3Project_Group10/">
+			<meta name="twitter:image" content="https://aquino-genesis.github.io/LP_ICT9Ruby_Q3Project_Group10/Images/xplore-logo.png">
 			<meta name="twitter:description" content="Xplore is a fare calculator that lets you find your next destinations to visit. Learn more about us!">
 		
 		<!-- Stylesheets -->
@@ -34,7 +34,7 @@
 		<link rel="icon" type="image/x-icon" href="Images/xplore-logo.png">
 
 		<!-- Search Engine Assisted Terms -->
-		<link rel="canonical" href="https://aquino-genesis.github.io/LP_ICT9Ruby_Q3Project_Group5">
+		<link rel="canonical" href="https://aquino-genesis.github.io/LP_ICT9Ruby_Q3Project_Group10/">
 
 		<title>Xplore</title>
 	</head>
@@ -55,7 +55,7 @@
 					<ul class="navbar-nav gap-3 align-items-center">
 
 						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="#fareCalculator">
+							<a class="nav-link active" aria-current="page" href="index.html#fareCalculator">
 								Fair Calculator 
 								<i class="text-primary bi bi-geo-alt-fill px-2 fs-5"></i>
 							</a>
@@ -85,7 +85,7 @@
         <!-- MAIN PAGE -->
         <div class="container mx-auto row g-2 py-3">
             <div class="card col-12 pt-3 mb-3">
-                <p class="text-center fw-bold fs-1">REGISTRATION</p>
+                <p class="text-center fw-bold fs-1">Sign Up/In</p>
             </div>
 
             <div class="card col-12 col-md-6 col-sm-6 mb-3 d-flex justify-content-center align-items-center">
@@ -130,7 +130,9 @@
                     </div>
                     
                     <!-- SUBMIT -->
-                    <div class="input-group my-4" onclick="displayNotif(); return false;">
+                    <div class="input-group my-4" onclick="displayNotif(); setTimeout(() => {
+                        window.location.href = 'index.html'
+                    }, 500); return false;">
                          <input type="submit" name="submit" id="submit" class="btn btn-primary mx-auto d-block container-fluid form-control input-lg" disabled></input>
                     </div>
                 </form>
