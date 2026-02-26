@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="en" data-bs-theme="dark">
+	<head>
+		<!-- Settings -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Descriptions -->
+
+			<!-- For Browser -->
+			<meta property="og:site_name" content="Xplore">
+			<meta property="og:title" content="Xplore | The Beautiful Nation of the Philippines">
+			<meta property="og:url" content="https://aquino-genesis.github.io/LP_ICT9Ruby_Q3Project_Group5">
+			<meta property="og:type" content="website">
+			<meta property="og:description" content="Xplore is a fare calculator that lets you find your next destinations to visit. Learn more about us!">
+			<meta property="og:image" content="Images/xplore-logo">
+			<meta property="og:image:width" content="512">
+			<meta property="og:image:height" content="512">
+
+			<!-- For Twitter -->
+			<meta name="twitter:title" content="Xplore | The Beautiful Nation of the Philippines">
+			<meta name="twitter:url" content="https://aquino-genesis.github.io/LP_ICT9Ruby_Q3Project_Group5">
+			<meta name="twitter:image" content="https://aquino-genesis.github.io/LP_ICT9Ruby_Q3Project_Group5/Images/xplore-logo.png">
+			<meta name="twitter:description" content="Xplore is a fare calculator that lets you find your next destinations to visit. Learn more about us!">
+		
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+		<link rel="stylesheet" type="text/css" href="global-style.css">
+
+		<!-- Favicons -->
+		<link rel="icon" type="image/png" href="Images/xplore-logo.png">
+		<link rel="icon" type="image/x-icon" href="Images/xplore-logo.png">
+
+		<!-- Search Engine Assisted Terms -->
+		<link rel="canonical" href="https://aquino-genesis.github.io/LP_ICT9Ruby_Q3Project_Group5">
+
+		<title>Xplore</title>
+	</head>
+
+	<body>
+		<!-- NAV BAR -->
+		<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow border-bottom border-5 border-primary" id="navbar">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="index.html">
+					<img src="Images/xplore-logo.png" class="img-fluid" style="max-height: 50px;">
+				</a>
+
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-nav">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse justify-content-end" id="navbar-nav">
+					<ul class="navbar-nav gap-3 align-items-center">
+
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="#fareCalculator">
+								Fair Calculator 
+								<i class="text-primary bi bi-geo-alt-fill px-2 fs-5"></i>
+							</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link active" id="themeToggle" style="cursor: pointer; user-select: none;">
+								Theme 
+								<i class="text-primary bi bi-moon-fill px-2 fs-5"></i>
+							</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link d-flex align-items-center" href="login.html">
+								Log In 
+								<i class="text-primary bi bi-door-open-fill ms-1 px-2"></i>
+							</a>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> <!-- Bootstrap Custom Behaviors -->
+
+        <!-- MAIN PAGE -->
+        <div class="container mx-auto row g-2 py-3">
+            <div class="card col-12 pt-3 mb-3">
+                <p class="text-center fw-bold fs-1">REGISTRATION</p>
+            </div>
+
+            <div class="card col-12 col-md-6 col-sm-6 mb-3 d-flex justify-content-center align-items-center">
+                <img src="Images/pfp.jpg" class="w-50">
+                <input type="file" id="file" class="form-control">
+            </div>
+
+            <div class="card col-12 col-md-6 col-sm-6 mb-3">
+                <!-- Notification -->
+                <div id="notif" hidden class="card mt-2 mx-2 px-2 pt-2 text-light rounded-1 bg-opacity-50 border-green border-2 bg-success">
+                    <p class="fw-bold">Success!</p>
+                    <p class="small">You have successfully registered for an account.</p>
+                </div>
+
+                <form class="container-fluid form-group">
+                    <!-- NAME INPUT -->
+                    <div class="input-group my-4">
+                        <input type="text" name="fname" id="fname" class="container form-control input-lg" placeholder="First Name"></input>
+                        <input type="text" name="lname" id="lname" class="container form-control input-lg" placeholder="Last Name"></input>
+                    </div>
+
+                    <!-- AGE INPUT -->
+                    <div class="input-group my-4">
+                        <input type="number" name="age" id="age" class="container-fluid form-control input-lg" placeholder="Age (0 - 120)"></input>
+                        <input type="number" name="phone" id="phone" class="container-fluid form-control input-lg" placeholder="Contact Number"></input>
+                    </div>
+
+                    <!-- EMAIL INPUT -->
+                    <div class="input-group my-4">
+                        <input type="email" name="email" id="email" class="container-fluid form-control input-lg" placeholder="Email@service.com"></input>
+                    </div>
+
+                    <!-- ACCOUNT INPUT -->
+                    <div class="input-group my-4">
+                        <input type="text" name="uname" id="uname" class="container form-control input-lg" placeholder="Username"></input>
+                        <input type="password" name="password" id="password" class="container form-control input-lg" placeholder="Password"></input>
+                    </div>
+
+                    <div class="input-group my-4 d-flex justify-content-center text-center">
+                        <input type="checkbox" id="accept" onclick="allowSubmit();"></input>
+                        <label for="accept" class="ms-2 small">By clicking, I accept the Terms of Use and Privacy Policy</label>
+                    </div>
+                    
+                    <!-- SUBMIT -->
+                    <div class="input-group my-4" onclick="displayNotif(); return false;">
+                         <input type="submit" name="submit" id="submit" class="btn btn-primary mx-auto d-block container-fluid form-control input-lg" disabled></input>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script>
+            function displayNotif() {
+                document.getElementById("notif").hidden = ((document.getElementById("submit").disabled == true) && (document.getElementById("notif").hidden == true));
+            }
+
+            function allowSubmit() {
+                document.getElementById("submit").disabled = !(document.getElementById("accept").checked);
+            }
+        </script>
+    </body>
+
+
+</html>
