@@ -68,7 +68,7 @@ window.getHaversineDistance = function getHaversineDistance(origin, dest) {
 
 // Gets distance between two selected locations factoring map data
 window.getRoutedDistance = async function getRoutedDistance(origin, dest) {
-	if (!origin || !dest) return null;
+	if ((!origin || !dest) || (origin == dest)) return null;
 
 	try {
 		const res = await fetch("https://api.openrouteservice.org/v2/directions/driving-car/geojson", {
