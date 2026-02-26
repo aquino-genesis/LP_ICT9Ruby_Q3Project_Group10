@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html lang="en" data-bs-theme="dark">
+	<head>
+		<!-- Settings -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Descriptions -->
+
+			<!-- For Browser -->
+			<meta property="og:site_name" content="Xplore">
+			<meta property="og:title" content="Xplore | The Beautiful Nation of the Philippines">
+			<meta property="og:url" content="https://aquino-genesis.github.io/LP_ICT9Ruby_Q3Project_Group5">
+			<meta property="og:type" content="website">
+			<meta property="og:description" content="Xplore is a fare calculator that lets you find your next destinations to visit. Learn more about us!">
+			<meta property="og:image" content="Images/xplore-logo">
+			<meta property="og:image:width" content="512">
+			<meta property="og:image:height" content="512">
+
+			<!-- For Twitter -->
+			<meta name="twitter:title" content="Xplore | The Beautiful Nation of the Philippines">
+			<meta name="twitter:url" content="https://aquino-genesis.github.io/LP_ICT9Ruby_Q3Project_Group5">
+			<meta name="twitter:image" content="https://aquino-genesis.github.io/LP_ICT9Ruby_Q3Project_Group5/Images/xplore-logo.png">
+			<meta name="twitter:description" content="Xplore is a fare calculator that lets you find your next destinations to visit. Learn more about us!">
+		
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+		<link rel="stylesheet" type="text/css" href="global-style.css">
+
+		<!-- Favicons -->
+		<link rel="icon" type="image/png" href="Images/xplore-logo.png">
+		<link rel="icon" type="image/x-icon" href="Images/xplore-logo.png">
+
+		<!-- Search Engine Assisted Terms -->
+		<link rel="canonical" href="https://aquino-genesis.github.io/LP_ICT9Ruby_Q3Project_Group5">
+
+		<title>Xplore</title>
+	</head>
+
+	<body>
+		<!-- NAV BAR -->
+		<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow border-bottom border-5 border-primary" id="navbar">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="index.html">
+					<img src="Images/xplore-logo.png" class="img-fluid" style="max-height: 50px;">
+				</a>
+
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-nav">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse justify-content-end" id="navbar-nav">
+					<ul class="navbar-nav gap-3 align-items-center">
+
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="#fareCalculator">
+								Fair Calculator 
+								<i class="text-success bi bi-geo-alt-fill px-2 fs-5"></i>
+							</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link active" href="Overview/contact.html">
+								Contact Us 
+								<i class="text-success bi bi-chat-right-fill px-2 fs-5"></i>
+							</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link active" id="themeToggle" style="cursor: pointer; user-select: none;">
+								Theme 
+								<i class="text-success bi bi-moon-fill px-2 fs-5"></i>
+							</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link d-flex align-items-center" href="Platform/login.html">
+								Log In 
+								<i class="text-success bi bi-door-open-fill ms-1 px-2"></i>
+							</a>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Main Content -->
+		<div class="container-fluid d-flex flex-column justify-content-center align-items-center m-auto p-0 text-center" style="backdrop-filter: blur(8px); background-image: url('Images/background-01.gif'); background-position: center; background-attachment: fixed; background-size: cover; background-repeat: no-repeat;">
+            <p class="py-5 mt-3 bg-body-secondary rounded-2 w-75 bg-opacity-75">
+                <img src="Images/xplore-logo.png" class="w-50" id="logo"><br>
+                <span class="fw-bold fs-1">Welcome to <span class="text-primary" id="currentTitle">Xplore</span></span><br>
+                <span class=" fst-italic fs-5 text-muted">"The Beautiful Nation of the Philippines<br>
+                <span>The <span class="text-primary fw-bold" id="tagA">Tradition</span>, The <span class="text-primary fw-bold" id="tagB">Culture</span>!"</span>
+            </p>
+		</div>
+
+        <div id="fareCalculator" class="mt-3 container-fluid d-flex flex-column align-items-center m-auto p-0 text-center">
+            <div class="pt-5 bg-body-tertiary rounded-2 w-75">
+                <span class="fw-bold fs-2">Fare Calculator</span><br><br>
+
+                <!-- Pick-up Location -->
+                <label for="location" class="form-label m-0 text-start">Where would you like to be picked up?</label>
+                <select id="location" class="form-select w-75 m-auto">
+                    <option selected disabled value="0">Select a pick-up location.</option>
+                </select><br>
+
+                <!-- Destination -->
+                <label for="location" class="form-label m-0 text-start">Where would you like to be dropped off?</label>
+                <select id="destination" class="form-select w-75 m-auto">
+                    <option selected disabled value="0">Select a drop-off destination.</option>
+                </select><br>
+
+				<!-- Passengers -->
+				<label for="location" class="form-label m-0 text-start">How many additional passengers?</label>
+				<input id="passengers" class="form-control w-75 m-auto mb-2" type="number" placeholder="0" max="9" min="0">
+
+				<!-- Electric Toggle -->
+				<input type="checkbox" id="electric" onclick="toggleMode(document.getElementById('electric').checked);"><label for="location" class="form-label m-0 ms-2 text-start">Prefer electric vehicles?</label><br><br>
+
+                <!-- Outputs -->
+				<div class="btn-group">
+					<button type="button" class="btn btn-secondary calculate">Calculate</button>
+
+					<button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="sr-only small">Alt</span>
+					</button>
+
+					<div class="dropdown-menu">
+						<h6 class="dropdown-header">Select a distance algorithm</h6>
+						<a class="dropdown-item calculate">Default</a>
+						<a class="dropdown-item calculate">Direct (Haversine)</a>
+					</div>
+				</div>
+
+				<p class="mt-3" id="result"></p>
+            </div>
+		</div>
+
+		<!-- FOOTER -->
+        <div class="container m-auto">
+			<footer class="row py-5 my-5 border-top">
+				<div class="d-flex flex-column align-items-center col-lg-3 col-md-3 col-sm-12 col-12">
+					<img src="Images/xplore-logo.png" class="img-fluid h-auto">
+					<p class="text-muted text-center">© Xplore. <br> All Rights Reserved.</p>
+				</div>
+
+				<div class="col-lg-1 col-md-1"></div>
+                <div class="col-lg-2 col-md-2"></div>
+
+				<div class="col-lg-3 col-md-3 col-sm-6 col-6">
+					
+				</div>
+
+				<div class="col-lg-3 col-md-3 col-sm-6 col-6">
+					<p class="fw-bold fs-5">Web Team</p>
+
+					<ul class="nav flex-column">
+						<li class="nav-item mb-2"><a href="https://aquino-genesis.github.io/LP_ICT9Ruby_Q1Project_Aquino_Genesis/" class="nav-link p-0">Genesis Marcus Aquino</a></li>
+						<li class="nav-item mb-2"><a href="https://drashermatthews.github.io/Las-Pi-as_ICT9Section_Q1Project_Del-Rosario_Asher/" class="nav-link p-0">Max Calata</a></li>
+						<li class="nav-item mb-2"><a href="" class="nav-link p-0">Inigo Combong</a></li>
+						<li class="nav-item mb-2"><a href="" class="nav-link p-0">Asher Del Rosario</a></li>
+					</ul>
+				</div>
+			</footer>
+		</div>
+
+		<!-- Bootstrap JS -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+		<script> // Tooltip initializer
+			document.addEventListener("DOMContentLoaded", () => {
+				const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+				tooltipTriggerList.forEach(el => {
+					new bootstrap.Tooltip(el);
+				});
+			});
+		</script>
+
+		<script> // Cookie handler
+
+			// read cookie helper
+			function getCookie(name) {
+				const value = `; ${document.cookie}`;
+				const parts = value.split(`; ${name}=`);
+				if (parts.length === 2) return parts.pop().split(';').shift();
+				return null;
+			}
+
+			// write cookie helper
+			function setCookie(name, value, days = 365) {
+				const d = new Date();	
+				d.setTime(d.getTime() + (days*24*60*60*1000));
+				document.cookie = `${name}=${value}; expires=${d.toUTCString()}; path=/`;
+			}
+
+			// on load
+			document.addEventListener("DOMContentLoaded", () => {
+
+				// apply saved theme
+				const saved = getCookie("theme");
+				if (saved) {
+					document.documentElement.setAttribute("data-bs-theme", saved);
+				}
+			});
+
+		</script>
+
+		<script> // Theme toggler
+			const htmlElement = document.documentElement;
+			const themeToggle = document.getElementById('themeToggle');
+			var icon = null;
+
+			if (themeToggle) {
+				icon = themeToggle.querySelector('i');	
+			}
+
+			// set correct icon when the page loads
+			document.addEventListener("DOMContentLoaded", () => {
+				const current = htmlElement.getAttribute('data-bs-theme');
+
+				if (icon != null) {
+					if (current === 'dark') {
+						icon.classList.remove('bi-moon-fill');
+						icon.classList.add('bi-sun-fill');
+					}
+				}
+			});
+
+			if (themeToggle != null) {
+				themeToggle.addEventListener('click', () => {
+					const current = htmlElement.getAttribute('data-bs-theme');
+					const next = current === 'dark' ? 'light' : 'dark';
+
+					htmlElement.setAttribute('data-bs-theme', next);
+					setCookie("theme", next);
+
+					if (icon != null) {
+						if (next === 'dark') {
+							icon.classList.remove('bi-moon-fill');
+							icon.classList.add('bi-sun-fill');
+						} else {
+							icon.classList.remove('bi-sun-fill');
+							icon.classList.add('bi-moon-fill');
+						}
+					}
+				});
+			}
+		</script>
+
+        <!-- Fare Calculation Handler -->
+        <script type="module" src="fareCalculator.js"></script>
+
+		<!-- eXplore Toggle -->
+		<script>
+			const logo = document.getElementById("logo");
+			const navbar = document.getElementById("navbar");
+			const currentTitle = document.getElementById("currentTitle");
+			const tagA = document.getElementById("tagA");
+			const tagB = document.getElementById("tagB");
+
+			const navbarAppearance = "navbar navbar-expand-lg bg-body-tertiary sticky-top shadow border-bottom border-5 ";
+
+			function toggleMode(explore) {
+				if (explore == true) {
+					navbar.classList.replace("border-primary", "border-success");
+
+					logo.setAttribute("src", "Images/explore-logo.png");
+					currentTitle.innerHTML = "e-Xplore";
+					currentTitle.classList.replace("text-primary", "text-success");
+
+					tagA.classList.replace("text-primary", "text-success");
+					tagB.classList.replace("text-primary", "text-success");
+					tagA.innerHTML = "Innovation";
+					tagB.innerHTML = "City";
+
+					for (const icon of document.getElementsByClassName("bi")) {
+						icon.classList.replace("text-primary", "text-success");
+					}
+				} else {
+					navbar.classList.replace("border-success", "border-primary");
+
+					logo.setAttribute("src", "Images/xplore-logo.png");
+					currentTitle.innerHTML = "Xplore";
+					currentTitle.classList.replace("text-success", "text-primary");
+					
+					tagA.classList.replace("text-success", "text-primary");
+					tagB.classList.replace("text-success", "text-primary");
+					tagA.innerHTML = "Tradition";
+					tagB.innerHTML = "Culture";
+
+					for (const icon of document.getElementsByClassName("bi")) {
+						icon.classList.replace("text-success", "text-primary");
+					}
+				}
+			}
+		</script>
+	</body>
+</html>
