@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	function showResult(distance, methodName) {
 		const result = document.getElementById("result");
-		const resultAppearance = " py-2 mb-4 rounded-2";
+		const resultAppearance = " py-2 mt-4 mb-4 rounded-2";
 		const passengers = Number(document.getElementById("passengers").value)
 
 		if (distance != null) {
