@@ -130,9 +130,16 @@
                     </div>
                     
                     <!-- SUBMIT -->
-                    <div class="input-group my-4" onclick="displayNotif(); setTimeout(() => {
-                        window.location.href = 'index.html'
-                    }, 500); return false;">
+                    <div class="input-group my-4" onclick="
+                    
+                    displayNotif(); 
+                        if (document.getElementById('submit').disabled == false) {
+                            setTimeout(() => {
+                                window.location.href = 'index.html';
+                            }, 500);
+                        }
+                    return false;">
+
                          <input type="submit" name="submit" id="submit" class="btn btn-primary mx-auto d-block container-fluid form-control input-lg" disabled></input>
                     </div>
                 </form>
