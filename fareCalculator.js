@@ -9,19 +9,19 @@ import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.182.0/build/three.m
 
 // --- CONSTANTS --- //
 const locations = { // (Latitude (x), Longitude (y))
-	"Taft Avenue": new THREE.Vector3(121.0008, 14.5358, 0),
-    "Magallanes": new THREE.Vector3(121.0287, 14.5159, 0),
-    "Ayala": new THREE.Vector3(121.0246, 14.5546, 0),
-    "Buendia": new THREE.Vector3(121.0384, 14.5504, 0),
-    "Guadalupe": new THREE.Vector3(121.0477, 14.5440, 0),
-    "Boni": new THREE.Vector3(121.0632, 14.5609, 0),
-    "Shaw Boulevard": new THREE.Vector3(121.0645, 14.5773, 0),
-    "Ortigas": new THREE.Vector3(121.0595, 14.5847, 0),
-    "Santolan-Annapolis": new THREE.Vector3(121.0556, 14.6132, 0),
-    "Araneta Center-Cubao": new THREE.Vector3(121.0508, 14.6204, 0),
-    "GMA-Kamuning": new THREE.Vector3(121.0435, 14.6378, 0),
-    "Quezon Avenue": new THREE.Vector3(121.0382, 14.6425, 0),
-    "North Avenue": new THREE.Vector3(121.0286, 14.6543, 0)
+	"Taft Avenue": new THREE.Vector2(121.0008, 14.5358),
+    "Magallanes": new THREE.Vector2(121.0287, 14.5159),
+    "Ayala": new THREE.Vector2(121.0246, 14.5546),
+    "Buendia": new THREE.Vector2(121.0384, 14.5504),
+    "Guadalupe": new THREE.Vector2(121.0477, 14.5440),
+    "Boni": new THREE.Vector2(121.0632, 14.5609),
+    "Shaw Boulevard": new THREE.Vector2(121.0645, 14.5773),
+    "Ortigas": new THREE.Vector2(121.0595, 14.5847),
+    "Santolan-Annapolis": new THREE.Vector2(121.0556, 14.6132),
+    "Araneta Center-Cubao": new THREE.Vector2(121.0508, 14.6204),
+    "GMA-Kamuning": new THREE.Vector2(121.0435, 14.6378),
+    "Quezon Avenue": new THREE.Vector2(121.0382, 14.6425),
+    "North Avenue": new THREE.Vector2(121.0286, 14.6543)
 };
 
 // This function adds locations to valid select elements
