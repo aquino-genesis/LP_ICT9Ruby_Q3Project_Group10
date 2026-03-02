@@ -154,9 +154,9 @@ document.addEventListener("DOMContentLoaded", () => {
 					showResult(distance, methodName);
 
 				} else { // no parentheses, fallback to haversine algo
-					console.log("Using default algo");
-					distance = await getRoutedDistance(locations[locationValue], locations[destinationValue]);
-					showResult(distance, "getHaversineDistance");
+					console.log("Using haversine algo");
+					distance = await getHaversineDistance(locations[locationValue], locations[destinationValue]);
+					showResult(distance, "Haversine");
 				}
 
 			} finally {
