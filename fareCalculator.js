@@ -146,17 +146,17 @@ document.addEventListener("DOMContentLoaded", () => {
 						distance = func.constructor.name === "AsyncFunction"
 							? await func(locations[locationValue], locations[destinationValue]) // handle async
 							: func(locations[locationValue], locations[destinationValue]); // handle normal
-					} else { // fallback to map algo if function is non-existent
+					} else { // fallback to haversine algo if function is non-existent
 						console.log("Using default algo");
-						distance = await getRoutedDistance(locations[locationValue], locations[destinationValue]);
+						distance = await getHaversineDistance(locations[locationValue], locations[destinationValue]);
 					}
 
 					showResult(distance, methodName);
 
-				} else { // no parentheses, fallback to map algo
+				} else { // no parentheses, fallback to haversine algo
 					console.log("Using default algo");
 					distance = await getRoutedDistance(locations[locationValue], locations[destinationValue]);
-					showResult(distance, "Routed");
+					showResult(distance, "getHaversineDistance");
 				}
 
 			} finally {

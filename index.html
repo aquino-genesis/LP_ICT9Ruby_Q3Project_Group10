@@ -111,7 +111,7 @@
 				<input id="passengers" class="form-control w-75 m-auto mb-2" type="number" placeholder="0" max="9" min="0" maxlength="1">
 
 				<!-- Electric Toggle -->
-				<input type="checkbox" id="electric" onclick="toggleMode(document.getElementById('electric').checked);"><label for="location" class="form-label m-0 ms-2 text-start">Prefer electric vehicles?</label><br><br>
+				<input type="checkbox" id="electric" onclick="toggleMode(document.getElementById('electric').checked);"><label for="location" class="form-label m-0 ms-2 text-start">Prefer electric motorcycle?</label><br><br>
 
                 <!-- Outputs -->
 				<div class="btn-group">
@@ -122,9 +122,9 @@
 					</button>
 
 					<div class="dropdown-menu">
-						<h6 class="dropdown-header">Select a distance algorithm</h6>
-						<a class="dropdown-item calculate">Default</a>
-						<a class="dropdown-item calculate">Direct (Haversine)</a>
+						<h6 class="dropdown-header">Select what to calculate</h6>
+						<a class="dropdown-item calculate">Using LRT</a>
+						<a class="dropdown-item calculate">Going Via Car Travel (Routed)</a>
 					</div>
 				</div>
 
