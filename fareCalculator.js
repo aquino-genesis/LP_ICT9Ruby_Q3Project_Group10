@@ -11,11 +11,8 @@ import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.182.0/build/three.m
 const locations = { // (Latitude (x), Longitude (y))
 	"LRT Line 1: Roosevelt": new THREE.Vector2(14.660178008970611, 121.0201787803958),
 	"LRT Line 1: Baclaran": new THREE.Vector2(14.534371214918977, 120.99827068714289 ),
-	"LRT Line 2: Santolan": new THREE.Vector2(14.622323412673413, 121.08592956782388),
-	"LRT Line 2: Recto": new THREE.Vector2(14.605526044512768, 120.98430151686547),
-	"MRT: North Avenue": new THREE.Vector2(14.652198605123688, 121.0325036350089),
-	"MRT: Taft Avenue": new THREE.Vector2(14.538228053782406, 121.00141170086125),
 };
+
 // This function adds locations to valid select elements
 function addLocations(selectElement) {
 	if (!selectElement || selectElement.dataset.loaded === "true") return;
