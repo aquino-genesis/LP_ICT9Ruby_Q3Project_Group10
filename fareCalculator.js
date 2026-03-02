@@ -9,16 +9,12 @@ import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.182.0/build/three.m
 
 // --- CONSTANTS --- //
 const locations = { // (Latitude (x), Longitude (y))
-	"Rizal Park": new THREE.Vector2(14.582919, 120.979683),   // Luneta Park proper center :contentReference[oaicite:0]{index=0}
-	"Malacañang Palace": new THREE.Vector2(14.594322, 120.994177),   // Main palace complex :contentReference[oaicite:1]{index=1}
-	"Intramuros (central)": new THREE.Vector2(14.584900, 120.977000),   // Rough center of walled city :contentReference[oaicite:2]{index=2}
-	"Manila Cathedral": new THREE.Vector2(14.591500, 120.973600),   // Cathedral within Intramuros :contentReference[oaicite:3]{index=3}
-	"Fort Santiago": new THREE.Vector2(14.587000, 120.973500),   // Main fort entrance (approx) :contentReference[oaicite:4]{index=4}
-	"Plaza de Roma": new THREE.Vector2(14.590800, 120.974700),   // Central plaza in Intramuros :contentReference[oaicite:5]{index=5}
-	"Plaza Moriones": new THREE.Vector2(14.593300, 120.971800),   // Plaza at Fort Santiago entrance (approx) :contentReference[oaicite:6]{index=6}
-	"Plaza de Armas": new THREE.Vector2(14.587700, 120.974000),   // Inner plaza at Fort Santiago :contentReference[oaicite:7]{index=7}
-	"Plaza Mexico (Pasig)": new THREE.Vector2(14.593800, 120.975500),   // Riverside square near Pasig River :contentReference[oaicite:8]{index=8}
-	"Manila (city center)": new THREE.Vector2(14.599512, 120.984222),   // Official city coordinate :contentReference[oaicite:9]{index=9}
+	"LRT Line 1: Roosevelt": new THREE.Vector2(14.660178008970611, 121.0201787803958),
+	"LRT Line 1: Baclaran": new THREE.Vector2(14.534371214918977, 120.99827068714289 ),
+	"LRT Line 2: Santolan": new THREE.Vector2(14.622323412673413, 121.08592956782388),
+	"LRT Line 2: Recto": new THREE.Vector2(14.605526044512768, 120.98430151686547),
+	"MRT: North Avenue": new THREE.Vector2(14.652198605123688, 121.0325036350089),
+	"MRT: Taft Avenue": new THREE.Vector2(14.538228053782406, 121.00141170086125),
 };
 // This function adds locations to valid select elements
 function addLocations(selectElement) {
